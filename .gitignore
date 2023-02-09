@@ -1,0 +1,6 @@
+build
+*.png
+NOTES.md
+.idea
+*.iml
+.vscode

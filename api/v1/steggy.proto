@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package api.v1;
+
+option go_package = "github.com/zcking/steggy/api/v1";
+
+service SteggyService {
+  rpc Encode(EncodeRequest) returns (EncodeResponse);
+  rpc Decode(DecodeRequest) returns (DecodeResponse);
+}
+
+message EncodeRequest {
+  string message = 1;
+  bytes image = 2;
+}
+
+message EncodeResponse {
+  bytes encoded_image = 1;
+}
+
+message DecodeRequest {
+  bytes image = 1;
+}
+
+message DecodeResponse {
+  string decoded_message = 1;
+}
