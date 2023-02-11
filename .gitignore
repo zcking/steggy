@@ -1,5 +1,6 @@
 build
 *.png
+!steggy.png
 NOTES.md
 .idea
 *.iml
